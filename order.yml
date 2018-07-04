@@ -21,7 +21,11 @@ spring:
     maxOpenPreparedStatements: 20
     url: jdbc:mysql://localhost:3306/SpringCloud_Sell?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
 
-
+  rabbitmq:
+    username: guest
+    host: localhost
+    password: guest
+    port: 5672
 eureka:
   client:
     service-url:
