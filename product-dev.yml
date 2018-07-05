@@ -26,7 +26,11 @@ spring:
         service-id: CONFIG
         enabled: true
       profile: dev
-
+  rabbitmq:
+    username: guest
+    host: localhost
+    password: guest
+    port: 5672
 server:
   port: 9001
 
