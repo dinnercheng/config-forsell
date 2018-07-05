@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: product
+  datasource:
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    filters: stat
+    maxActive: 100
+    initialSize: 100
+    maxWait: 60000
+    minIdle: 100
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+    url: jdbc:mysql://localhost:3306/SpringCloud_Sell?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+
+
+server:
+  port: 9001
+
+mybatis:
+  type-aliases-package: com.imooc.product.model
+#  mapper-locations: classpath:com/imooc/product/dao/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    default-fetch-size: 100
+    default-statement-timeout: 3000
+
+  mapper-locations: classpath:mappers/*.xml
+
+env:
+  dev
